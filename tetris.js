@@ -229,6 +229,20 @@ const player = {
     score: 0,
 }
 
+// working on spacebar drop bottom function (give me undefined and piece disappears when i go over the bottom border, also clashes with other pieces)
+
+function playerDropBottom () {
+    player.pos.y += 5;
+    if (collide(arena, player)) {
+        player.pos.y--;
+        merge(arena, player);
+        playerReset();
+        arenaSweep();
+        updateScore();
+    }
+    dropCounter = 0;
+}
+
 document.addEventListener ("keydown", event => {
     if (event.keyCode === 37) {
         playerMove(-1);
@@ -239,6 +253,10 @@ document.addEventListener ("keydown", event => {
     } else if (event.keyCode === 38) {
         playerRotate(1);
     } 
+    
+    //else if (event.keyCode === 32) {
+    //    playerDropBottom();
+    //} 
 
 })
 
