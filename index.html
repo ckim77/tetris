@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Tetris</title>
-    
+
 </head>
 <body>
     <div id ="score"></div>
+    <div>
+        <button id="play" class="btn">Play</button>
+        <button id="title-btn" class="btn">Title</button>
+        <button id="high-score-btn" class="btn">High Score</button>
+    </div>
     <canvas id="tetris" width="240" height="400"></canvas>
+    <div id="title"></div>
+    <div id="high-score"></div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="tetris.js"></script>
 </body>
 </html>
