@@ -1,1 +1,2 @@
-# tetris
+- Coded tetris using javascript on the front end and express/cors on the back end
+- 
